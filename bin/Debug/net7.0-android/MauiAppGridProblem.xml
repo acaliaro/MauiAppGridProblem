@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MauiAppGridProblem</name>
+    </assembly>
+    <members>
+        <member name="P:MauiAppGridProblem.MainViewModel.Valori">
+            <inheritdoc cref="F:MauiAppGridProblem.MainViewModel.valori"/>
+        </member>
+    </members>
+</doc>
