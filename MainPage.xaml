@@ -163,6 +163,79 @@
             </CollectionView.ItemTemplate>
 
         </CollectionView>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="2">
+
+            <Label Text="AAAA"/>
+            <Label Text="AAAA"/>
+            <Label Text="AAAA"/>
+            <Label Text="AAAA"/>
+            <Label Text="AAAA"/>
+
+            <CollectionView ItemsSource="{Binding Valori}">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="4"
+                        Orientation="Vertical"
+                        Span="7"
+                        VerticalItemSpacing="4" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <StackLayout>
+                            <Label HorizontalTextAlignment="Center" Text="Grid" />
+                            <Border
+                                Padding="0"
+                                HeightRequest="40"
+                                WidthRequest="40">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding .}"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="Center">
+                                    <!--<Label.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding CurrentDate}"
+                                        TargetType="Label"
+                                        Value="True">
+                                        <Setter Property="TextColor" Value="{Binding Source={x:Reference this}, Path=SelectedDateTextColor}" />
+                                    </DataTrigger>
+                                </Label.Triggers>-->
+                                </Label>
+                                <!--<Border.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding CurrentDate}"
+                                    TargetType="Border"
+                                    Value="True">
+                                    <Setter Property="StrokeShape" Value="RoundRectangle 18" />
+                                    <Setter Property="BackgroundColor" Value="{Binding Source={x:Reference this}, Path=SelectedDateBackGroundColor}" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    Binding="{Binding CurrentDate}"
+                                    TargetType="Border"
+                                    Value="False">
+                                    <Setter Property="BackgroundColor" Value="Transparent" />
+                                </DataTrigger>
+                            </Border.Triggers>-->
+                            </Border>
+                            <!--<StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=CurrentDateCommand}" CommandParameter="{Binding .}" />
+                            <DropGestureRecognizer
+                                AllowDrop="True"
+                                DropCommand="{Binding Source={x:Reference this}, Path=DropCommand}"
+                                DropCommandParameter="{Binding .}" />
+                        </StackLayout.GestureRecognizers>-->
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
     </Grid>
 
 
